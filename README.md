@@ -33,7 +33,33 @@
   import HomeComponent from './HomeComponent';
   export default HomeComponent;
   ```
-
+3. for ...in vs for ...of
+  - for ...in = Access to object's keys / Any object
+  ```js
+  const obj = {
+    a: 5,
+    b: 6,
+    c: 7
+  }
+  for (let keys in obj){
+    console.log(keys); // a, b, c
+  }
+  for (let values in obj){
+    console.log(obj[values]); // 5, 6, 7
+  }
+  ```
+  - for ...of = Access to array's value / [Symbol iterator]
+  ```js
+  var iterable = [3, 5, 7];
+  
+  for(let key in iterable){
+    console.log(key); // 0, 1, 2
+  }
+  
+  for(let value of iterable){
+    console.log(value); // 3, 5, 7
+  }
+  ```
 ### :slot_machine: ML
 ***
 1. Is Faster R-CNN best for object detection?<br>
