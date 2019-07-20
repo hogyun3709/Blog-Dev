@@ -74,7 +74,38 @@
   var closure = getClosure();
   console.log(closure())
   ```
+
+5. Hoisting
+  - It is mechanism where var and fns declarations are moved to the top of their scope. 함수나 변수 선언 부분은 위로 끌어올린다. 대입은 그대로.
+  - variable
+  ```js
+  function foo(){
+    // var a; // has been declared
+    console.log(a); // undefined
+    var a = 100;
+    console.log(a); // 100
+  }
+  ```
+  - function
+  ```js
+  foo()  // Hello
   
+  function foo(){
+    console.log('Hello');
+  }
+  ````
+  ```js
+  foo(); // foo is not a function
+  var foo = function(){
+    console.log('Hello');
+  }
+  
+  var foo;
+  foo(); //foo is not a function
+  foo = function(){
+    console.log('Hello');
+  }
+  ```
 ### :slot_machine: ML
 ***
 1. Is Faster R-CNN best for object detection?<br>
