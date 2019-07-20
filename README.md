@@ -60,6 +60,21 @@
     console.log(value); // 3, 5, 7
   }
   ```
+4. Closure
+  - Closure is the combination of a function. 흔히 함수 안의 함수라고도 한다.
+  - It gives you access to an outer function's scope from an inner function. 내부 함수에서 외부 함수에 접근 할수있는 권한을 준다.
+  - It creates surrounding state which is lecial environment. => Enables to build private function and variables.
+  ```js
+  function getClosure(){
+   var greeting = 'Hello World';
+    return () => {
+      return greeting;
+    }
+   }
+  var closure = getClosure();
+  console.log(closure())
+  ```
+  
 ### :slot_machine: ML
 ***
 1. Is Faster R-CNN best for object detection?<br>
