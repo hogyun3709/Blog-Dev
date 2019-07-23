@@ -2,6 +2,17 @@
 ***
 ### :blue_book: General
 ***
+1. parameter vs argument
+  - Parameter: variable listed as a part of the function definition
+  ```js
+  function varCheck(parameter1, parameter2){
+    console.log(parameter1 + parameter2);
+  }
+  ```
+  - Argument: values passed to the function when it is invoked(called)
+  ```js
+  varCheck(argument1, argument2);
+  ```
 
 ### :green_apple: Node.js
 ***
