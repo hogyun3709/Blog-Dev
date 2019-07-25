@@ -123,6 +123,71 @@
 6. AJAX - Asynchronous Javascript And XML
   - allows exchange data with web server behind the scene.
   - enables update/render part of the page without reloading the whole page
+  
+7. Function Scope vs Block Scope vs Lexical Scope
+  - Function Scope: The area that variables exist in a funciton-scope accessibility.
+  - Variable accessibilty only exists in the function.
+  ```js
+  function foo(){
+    var fruit ='apple';
+    console.log('inside function: ',fruit);
+  }
+  foo();                    //inside function: apple
+  console.log(fruit);       //error: fruit is not defined 
+  ```
+  - Block Scope: The area with in conditional state and loops.
+  - Const and let takes role of declaring variables in the block scope.
+  ```js
+  function foo(){
+    if(true){
+        var fruit1 = 'apple';        //exist in function scope
+        const fruit2 = 'banana';     //exist in block scope
+        let fruit3 = 'strawberry';   //exist in block scope
+
+    }
+    console.log(fruit1);
+    console.log(fruit2);
+    console.log(fruit3);
+  }
+
+  foo();
+  //result:
+  //apple
+  //error: fruit2 is not defined
+  //error: fruit3 is not defined
+  ```
+  - Lexical Scope: The area that children scope have the access to the variables defined in the parent scope.
+  ```js
+  var name = 'hogyun';
+  function log() {
+    console.log(name);
+  }
+
+  function wrapper() {
+    var name = 'hugo'; //If not declaring, => name = 'hugo'; result will be hugo
+    log();
+  }
+  wrapper(); // hogyun
+  ```
+8. IIFE(Immediately-invoked funciton expression)
+  - Function that defines and returns simultaneously.
+  - 초기화와, global scope varible 충돌 방지
+  - 순수함수 프로그래밍에서 use case 가 있음.
+  ```js
+  (function() {
+    var name = "hogyun"
+    console.log(name)
+  }())
+
+  // hogyun
+  ```
+  ```js
+  (function(score) {
+    console.log(score)
+  })(95)
+
+  // 95
+  ```
 ### :slot_machine: ML
 ***
 1. Is Faster R-CNN best for object detection?<br>
