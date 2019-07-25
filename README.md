@@ -13,6 +13,9 @@
   ```js
   varCheck(argument1, argument2);
   ```
+2. CORS(Cross-origin-resource-sharing)
+  - It allows AJAX requests to manage same origin policy
+  - To put it simply, we need to use API datas
 
 ### :green_apple: Node.js
 ***
@@ -117,6 +120,9 @@
     console.log('Hello');
   }
   ```
+6. AJAX - Asynchronous Javascript And XML
+  - allows exchange data with web server behind the scene.
+  - enables update/render part of the page without reloading the whole page
 ### :slot_machine: ML
 ***
 1. Is Faster R-CNN best for object detection?<br>
