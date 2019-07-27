@@ -198,7 +198,41 @@
   arr[Symbol.iterator]().next(); // {value: 1, done: false} = iterator
   const iterator =  arr[Symbol.iterator(); // 이렇게 이터레이터로 만들어주어야 .next() 함수로 access 가능
   ```
- 
+10. Generator
+  - It can stop midway and then continue from where it stopped.
+  - It generates a value with the yield keyword rather than return
+  - 이터러블을 생성하는 함수로도 여겨진다.
+  - 이터레이터를 리턴하는 함수
+  - async/await feature can be based on generator
+  ```js
+  function *gen(){
+    yield 1;
+    yield 2;
+    yield 3;
+  }
+  
+  let iter = gen();
+  console.log(iter.next()); // { value: 1, done: false };
+  console.log(iter.next()); // { value: 2, done: false };
+  console.log(iter.next()); // { value: 3, done: false };
+  console.log(iter.next()); // { value: undefined, done: true };
+  ```
+  ```js
+  function *gen(){
+    yield 1;
+    yield 2;
+    yield 3;
+    return 100;
+  }
+  
+  let iter = gen();
+  console.log(iter.next()); // { value: 1, done: false };
+  console.log(iter.next()); // { value: 2, done: false };
+  console.log(iter.next()); // { value: 3, done: false };
+  console.log(iter.next()); // { value: 100, done: true };
+  
+  for(const a of gen()) console.log(a); // 1 2 3 - 순회할땐 return 값은 없이 순회한다.
+  ```
 ### :slot_machine: ML
 ***
 1. Is Faster R-CNN best for object detection?<br>
