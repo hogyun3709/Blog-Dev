@@ -188,6 +188,17 @@
 
   // 95
   ```
+9. Iterable / Iterator protocool 
+  - Array, Set, Map 등의 JS 내장 객체는 Iterable/Iterator protocool를 따른다.
+  - Iterable: Iterator 리턴하는 [Symbol.iterator]() - 메소드 를 가진 값 - JS array 는 이터러블이다.
+  - Iterator: { value, done } 으로 표현되는 Object 를 return 하는 next() - 를 가진 값
+  ```js
+  const arr = [1,2,3];
+  arr[Symbol.iterator] // f values() { [native code] } = iterable
+  arr[Symbol.iterator]().next(); // {value: 1, done: false} = iterator
+  const iterator =  arr[Symbol.iterator(); // 이렇게 이터레이터로 만들어주어야 .next() 함수로 access 가능
+  ```
+ 
 ### :slot_machine: ML
 ***
 1. Is Faster R-CNN best for object detection?<br>
