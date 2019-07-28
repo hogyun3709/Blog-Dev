@@ -245,7 +245,6 @@
 11. Callback
   - A function that is to be executed after another function has finsied.
   - Any function that is passed as an argument
-  - Generally using for handling async operation
   ```js
   /* sync callback */
   function greeting(name) { //greeting is callback function
@@ -254,11 +253,57 @@
 
   function processUserInput(callback) {
     var name = prompt('Please enter your name.');
-    callback(name);
+    callback(name); // no need to have retrun statement 
   }
 
   processUserInput(greeting);
   ```
+  - Generally using for handling async operation
+  ```js
+  /* Failure case */
+  function findUser(id) {
+    let user;
+    setTimeout(function() {
+      console.log("waited 0.1 sec.");
+      user = {
+        id: id,
+        name: "User" + id,
+        email: id + "@test.com"
+      };
+    }, 100);
+    return user;
+  }
+
+  const user = findUser(1); // setTimeout 은 async 이기에 compiler pointer 는 이미 return user(undefined)를 할당된다.
+  console.log("user:", user);
+  /* result: 
+   user: undefined
+   waited 0.1 sec
+  */
+  ```
+  ```js
+  /* Successful case */
+  function findUserAndCallBack(id, cb) {
+    setTimeout(function() {
+      console.log("waited 0.1 sec.");
+      const user = {
+        id: id,
+        name: "User" + id,
+        email: id + "@test.com"
+      };
+      cb(user);
+    }, 100);
+  }
+  // 함수로 부터 결과값을 리턴 받기를 포기하고, 결과값을 이용해서 처리할 로직을 콜백 함수에 담아 인자(2번째) 로 던지면 된다.
+  findUserAndCallBack(1, function(user) {
+    console.log("user:", user);
+  });
+  /* result: 
+  waited 0.1 sec
+  user: {id: 1, name: "User1", email: "1@test.com"}
+  */
+  ```
+
   
 ### :slot_machine: ML
 ***
