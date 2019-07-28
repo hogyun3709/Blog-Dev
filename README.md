@@ -16,9 +16,18 @@
 2. CORS(Cross-origin-resource-sharing)
   - It allows AJAX requests to manage same origin policy
   - To put it simply, we need to use API datas
-
+3. Babel
+  - Javascript transpiler that converts ES6+ in to plain ES (Let browser understand the code)
+  - Transpilates JSX
+4. Webpack
+  - Node module bundler that packaging assets
+6. XMLHttpRequest
+  - method that transfer data btw browser and server
+  - Used for Ajax programming - retrieve data from URL w/o page refresh
 ### :green_apple: Node.js
 ***
+1. Express
+  - server side web application framework for node js
 
 ### :cyclone: React.js
 ***
