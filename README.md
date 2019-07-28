@@ -242,6 +242,24 @@
   
   for(const a of gen()) console.log(a); // 1 2 3 - 순회할땐 return 값은 없이 순회한다.
   ```
+11. Callback
+  - A function that is to be executed after another function has finsied.
+  - Any function that is passed as an argument
+  - Generally using for handling async operation
+  ```js
+  /* sync callback */
+  function greeting(name) { //greeting is callback function
+  alert('Hello ' + name);
+  }
+
+  function processUserInput(callback) {
+    var name = prompt('Please enter your name.');
+    callback(name);
+  }
+
+  processUserInput(greeting);
+  ```
+  
 ### :slot_machine: ML
 ***
 1. Is Faster R-CNN best for object detection?<br>
