@@ -303,8 +303,46 @@
   user: {id: 1, name: "User1", email: "1@test.com"}
   */
   ```
-
+12. Promise
+  - Callback hell(비동기 프로그래밍시, 함수의 매개변수로 넘겨지는 콜백함수가 반복되는 현상)을 해결하기위한 패턴 중 하나
+  - Callback vs Promise
+  ```js
+  function add10(a, callback){
+    setTimeout(() => callback(a + 10), 1000);
+  }
+  add10(5, res => {
+    add10(5, res => {
+      add10(5, res => {
+        console.log(res)
+      }
+    }
+  }
   
+  function add20(a){
+    return new Promise(resolve => setTimeout(() => resolve(a + 20), 100));
+  }
+  add20(5)
+    .then(add20)
+    .then(add20)
+    .then(console.log)
+  ```
+  - promise 는 보통 어떤 라이브러리의 함수를 호출하여 리턴받은 promise 객체를 사용하는 경우가 많다: fetch() 를 사용하여
+  ```js
+  function fetchAuthorName(postId) {
+    return fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+      .then(response => response.json())
+      .then(post => post.userId)
+      .then(userId => {
+        return fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+          .then(response => response.json())
+          .then(user => user.name);
+      });
+  }
+
+  fetchAuthorName(1).then(name => console.log("name:", name));
+  ```
+  - 비동기 상황을 일급 값으로 다룬다. - return statement 가 있기 때문 - pending, fulfilled(resolved), reject
+
 ### :slot_machine: ML
 ***
 1. Is Faster R-CNN best for object detection?<br>
