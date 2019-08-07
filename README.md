@@ -24,6 +24,9 @@
 6. XMLHttpRequest
   - method that transfer data btw browser and server
   - Used for Ajax programming - retrieve data from URL w/o page refresh
+7. Compiler vs interpreter
+  - Compiler = Compiles instruction(program) in to machine code entirely - Faster but non-editable
+  - Interpreter = Interprets instruction(program) in real time step by step - Slower but editable
 ### :green_apple: Node.js
 ***
 1. Express
