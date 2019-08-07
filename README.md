@@ -31,6 +31,9 @@
 
 ### :cyclone: React.js
 ***
+1. Why are we using super in react?
+  - We can not use 'this' keyword without declaring super in constructor.
+  - Super calls 'React.Component' (in react)
 
 ### :banana: Javascript
 ***
