@@ -35,6 +35,12 @@
   - We can not use 'this' keyword without declaring super in constructor.
   - Super calls 'React.Component' (in react)
 
+2. What are components?
+  - Simply, class or function that takes inputs(props) and returns React element
+  
+3. How React UI works?
+  - Mounting -> Updating -> Unmounting
+  - Use lifesycle function
 ### :banana: Javascript
 ***
 1. Require vs Import
