@@ -41,6 +41,7 @@
 3. How React UI works?
   - Mounting -> Updating -> Unmounting
   - Use lifesycle function
+  ![react-ui-lifeCycle](https://github.com/hogyun3709/Blog-Dev/blob/master/blog-dev-docs/react-ui-lifeCycle.jpg)
 ### :banana: Javascript
 ***
 1. Require vs Import
