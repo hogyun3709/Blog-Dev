@@ -33,7 +33,19 @@
   - 버튼 태그는 점점 쓰임새가 덜하는 이유가 default 스타일링 때문이다. - 이 부분은 reset 스타일을 하면 되긴함.
 9. button 태그 스타일링 시 유의사함
   - button 스타일링 시 button Area 라는 parent 영역을 설정해주어야한다.
-  
+  ```css
+    const buttonArea = {
+      display: "flex",
+      justifyContent: "center"
+    };
+    const button = {
+      alignItems: "center",
+      color: "white",
+      backgroundColor: "tomato",
+      borderColor: "tomato"
+    };
+
+  ```
 ### :green_apple: Node.js
 ***
 1. Express
