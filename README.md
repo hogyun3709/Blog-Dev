@@ -46,6 +46,11 @@
     };
 
   ```
+10. DOM 에 관련하여..
+  - DOM = HTML의 원하는 위치에 접근하여 Document 를 인식하고자 하는 방식
+  - Vitrual DOM 을 사용하는 이유? = Automation of DOM fragment / SPA 에서는 DOM 조작이 많아지는데, 브라우저 연산이 많아짐 => 렌더링될 변화를 묶어서 진행
+  - 추가 = VDOM은 추상화 / 가벼운 복사본을 만들고 변화의 전후 를 비교하여 업데이트한다. / 언제 DOM을 렌더링 할것인가? => 데이터가 변화했을때
+  
 ### :green_apple: Node.js
 ***
 1. Express
