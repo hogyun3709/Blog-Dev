@@ -69,6 +69,9 @@
   - Mounting -> Updating -> Unmounting
   - Use lifesycle function
   ![react-ui-lifeCycle](https://github.com/hogyun3709/Blog-Dev/blob/master/blog-dev-docs/react-ui-lifeCycle.jpg)
+  - Will hooks replace classes or redux>
+    - Hook 이 앞으로 걸어가야 할 리액트의 방향이긴 하나, Dan Abramov 는 기존의 앱을 훅으로 다시 사용 작성하라고는 권하지 않았다.
+    - State Management 부분에서는 도움을 주는 것이 확실하니, 앞으로의 행보를 기대해봐야겠다.
 ### :banana: Javascript
 ***
 1. Require vs Import
