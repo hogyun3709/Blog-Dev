@@ -50,7 +50,25 @@
   - DOM = HTML의 원하는 위치에 접근하여 Document 를 인식하고자 하는 방식
   - Vitrual DOM 을 사용하는 이유? = Automation of DOM fragment / SPA 에서는 DOM 조작이 많아지는데, 브라우저 연산이 많아짐 => 렌더링될 변화를 묶어서 진행
   - 추가 = VDOM은 추상화 / 가벼운 복사본을 만들고 변화의 전후 를 비교하여 업데이트한다. / 언제 DOM을 렌더링 할것인가? => 데이터가 변화했을때
-  
+
+11. CSS in advance = CSS preprocessor = SASS(SCSS) 
+  - Why Sass? 기존의 Css 의 문제점
+    - Maintainance & readability
+    - Code redundancy & Difficulties in sturcturing
+  - Traits of Sass
+    - Advanced features and proactive community
+  - Difference btw Sass and Scss
+    - Scss is superset of Sass
+    - CSS 거의 같은 문법으로 Sass 의 기능을 지원함.
+    - Scss has {} and ; / @minxin and @include
+  - How preprocessor compiles Sass?
+    - 웹에서는 결국 표준 css 로 처리해야함
+    - Under node.js development env, following options:
+      - SassMeister, node-sass, gulp, webpack, parcel and etc
+  - Sass vs Scss?
+    - Sass: Concise & less strict syntax rules ( easy to read, easy to write )
+    - Scss: Expressive & familiar syntax rules with css ( compatabile with css ) / supports multi line 
+    
 ### :green_apple: Node.js
 ***
 1. Express
