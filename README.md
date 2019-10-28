@@ -68,7 +68,12 @@
   - Sass vs Scss?
     - Sass: Concise & less strict syntax rules ( easy to read, easy to write )
     - Scss: Expressive & familiar syntax rules with css ( compatabile with css ) / supports multi line 
-    
+12. Bundler
+  - :question: What is Bundler?
+    - :exclamation: Bunlder is a tool that takes series of files and their dependencies into a single file.
+    - :exclmation: 여러가지로 나누어져있는 파일을 하나의 파일로 만들어주는 도구이다.
+  - :thinking: Why should we using it?
+    - :open_mouth: HTTP Request 시에 소요되는 시간을 효율적으로 관리하기 위해
 ### :green_apple: Node.js
 ***
 1. Express
