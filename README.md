@@ -74,6 +74,11 @@
     - :exclmation: 여러가지로 나누어져있는 파일을 하나의 파일로 만들어주는 도구이다.
   - :thinking: Why should we using it?
     - :open_mouth: HTTP Request 시에 소요되는 시간을 효율적으로 관리하기 위해
+13. Cross-browsing
+  - Enables to make web application which is client side features to work in differenct environments(browser)
+  - 다양한 브라우저에서 동등한 기능을 제공하는 것이 주 목적이다.
+  - 물론 디자인 측면이나 css 효과를 살려서 모든 브라우저에서 작동한다면 안성맞춤 이지만, 정작 중요한 웹사이트의 퍼포먼스를 깍아내리지 않는 선에서 조율.
+  
 ### :green_apple: Node.js
 ***
 1. Express
