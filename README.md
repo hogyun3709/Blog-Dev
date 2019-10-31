@@ -420,6 +420,31 @@
   -[R-CNN, Fast R-CNN, Faster R-CNN, YOLO - Objecet Detectiion Alogirthms](https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e)
 
 2. 
+### :ledger:HTML/CSS
+***
+1. CSS - UNITs :) / CSS에서 사용하는 여러가지의 단위
+###### Absolute: 사용자 / 브라우저의 설정 & 변화로 접근성 문제를 유발 할수 있음
+  - px, pt, cm, in
+###### Relative
+  - em, rem, cap, ch, ex, ic, lh, rlh
+  - 보통 em과 rem 은 확대 가능한 레이아웃을 만들기 위해 쓴다 / 예를 들어 그리드 시스템?
+  - em 과 rem은 css 의 font-size 속성값에 비례 하는 상대단위
+    - EX) font-size: 16px:
+      - 0.5em = 16px x 0.5 = 8px
+      - 1em = 16 px x 1 = 16px
+      - 2em = 16 px x 2 = 32px
+    - EX) font-size: 20px;
+      - 0.5em = 20px x 0.5 = 10px
+      - 1em = 20px x 1 = 20px
+      - 2em = 20px x 2 = 40px
+  - em 과 rem 의 차이 ? 'r' = root, rem 은 최상위 요소의 속성값에 비례, em 은 해당하는 요소/태그
+  - Viewport % lengths
+    - vh, vw, vi, vb, vmin, vmax
+    - vh와 vw - 반응형 웹에서 퍼센트를 대체할 새로운 단위 - viewport 의 initial 컨테이닝 블록의 값, 100 분의 1
+    - 보통 full w / h 를 만들때 100vh , 100vw 를 쓴다
+    ![containing-box](https://github.com/hogyun3709/Blog-Dev/blob/master/blog-dev-docs/containingBox.png)
 
+    
+    
 ### :horse: MongoDB
 ***
