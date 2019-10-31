@@ -410,7 +410,10 @@
   fetchAuthorName(1).then(name => console.log("name:", name));
   ```
   - 비동기 상황을 일급 값으로 다룬다. - return statement 가 있기 때문 - pending, fulfilled(resolved), reject
-
+13. continue statement 
+  - It terminates execution of statements in the current iteration of the current loop, and continues the next iteration
+  - 컨디션에 부합하면, 해당하는 이터레이션을 멈추고 다음 이터레이션을 실행한다
+  - break와 달리 루프의 실행을 완전히 종료하지않는다
 ### :slot_machine: ML
 ***
 1. Is Faster R-CNN best for object detection?<br>
