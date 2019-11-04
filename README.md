@@ -414,6 +414,23 @@
   - It terminates execution of statements in the current iteration of the current loop, and continues the next iteration
   - 컨디션에 부합하면, 해당하는 이터레이션을 멈추고 다음 이터레이션을 실행한다
   - break와 달리 루프의 실행을 완전히 종료하지않는다
+  
+14. API
+  - Application programming interface
+  - 소프트웨어 간의 지정된 형식으로 요청, 응답, 명령등을 받을 수 있게하는 수단
+  
+15. RESTful API
+  - rest 하게 api를 디자인하는 방법을 말한다. 여기서 rest(restful)하게란?
+  - 각 요청이 URI만으로도 어느정도 어떤 동작이나 정보를 위한 것인지를 추론 가능하게
+  - GET, POST, PUT, DELETE, PATCH 와같은 5가지의 HTTP 요청으로 각각의 쓰임새에 일치 하게끔 어플리케이션을 디자인하는 것.
+  - In advance
+    - rest 한 제약 조건들의 집합
+
+    
+  * 참고자료
+    - [RESR API가 뭔가요?](https://www.youtube.com/watch?v=iOueE9AXDQQ&fbclid=IwAR0uR8yXi97jX1gW3JtRh8tkiylFjEEJikhGLW-NRiY-mxf0m0NnTGQRjQs) (07:15)
+    - [그런 REST API로 괜찮은가](https://www.youtube.com/watch?v=RP_f5dMoHFc) (47:02)
+  
 ### :slot_machine: ML
 ***
 1. Is Faster R-CNN best for object detection?<br>
