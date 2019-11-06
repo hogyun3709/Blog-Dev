@@ -95,7 +95,114 @@
   
 3. How React UI works?
   - Mounting -> Updating -> Unmounting
-  - Use lifesycle function
+    - Mounting = 인스턴스가 생성되고 DOM에 나타나는 과정
+      - Methods = constructor -> getDerivedStateFromProps -> render -> componentDidMount
+        - constructor: Initialize state value / state 의 초기값 설정
+        - getDerivedStateFromProps: props 와 state 값을 동기화 시킴
+        - render: returns React elements
+        - componentDidMount: 컴포넌트를 생성, 첫 렌더링후 호출되는 함수
+        ```js
+        import React, { Component } from 'react';
+
+        class MyComponent extends Component{
+            state = {
+               number : 0
+            }
+            constructor(props)
+            {
+                super(props);
+                console.log("Constructor Method 호출");
+            }
+
+            static getDerivedStateFromProps(nexProps, prevState)
+            {
+                console.log("getDerivedStateFromProps 호출");
+                return null;
+            }
+
+            componentDidMount()
+            {
+                console.log("componentDidMount 호출");
+            }
+
+            render(){
+                console.log("render 호출")
+                return(
+                    <div>
+                        <h1>Hello World!! My Name is {this.props.name}</h1>
+                    </div>
+                )
+            }
+        }
+        export default MyComponent;
+        ```
+    - Updating = props or state의 변경으로 컴포넌트가 re-render되는 과정 / 부모 컴포넌트가 리렌더링될떄, this.forceUpdate로 강제 re render
+      - Methods = getDericedStateFromProps -> shouldComponentUpdate -> render -> getSnapShotBeforeUpdate -> componentDidUpdate
+        - getDerivedStateFromProps: 마운트과정에서 이어짐 (?)- 업데이팅에서는 변화가 없나?
+        - shouldComponentUpdate: 컴포넌트를 리렌더링할지 결정하는 함수. if returns true, it calls render,GSBU, CDU funcitons.
+        - render: update 된 값을 가지고 re-render
+        - getSnapshotBeforeUpdate: 변경된 요소를 DOM에 반영하기 직전에 호출됨
+        - componentDidUpdate: 're'-render 이후에 호출되는 함수
+        ```js
+          import React, { Component } from 'react';
+
+          class MyComponent extends Component{
+
+              state = {
+                  name : ""
+              }
+
+              constructor(props)
+              {
+                  super(props);
+                  console.log("Constructor Method 호출");
+              }
+
+              static getDerivedStateFromProps(nextProps, prevState)
+              {
+                  console.log("getDerivedStateFromProps 호출");
+              }
+
+              shouldComponentUpdate(nextprops, nextState)
+              {
+                  console.log("sholudComponetUpdate 호출")
+                  return true;
+              }
+
+              componentDidUpdate()
+              {
+                  console.log("componentDidUpdate 호출");
+              }
+
+              getSnapshotBeforeUpdate(prevProps, prevState)
+              {
+                  console.log("getSnapshotBeforeUpdate 호출")
+                  return null;
+              }
+
+              handleOnChange = (e) => {
+                  this.setState({
+                      name : e.target.value
+                  })
+              }
+
+              render(){
+                  console.log("render 호출")
+                  return(
+                      <div>
+                          <input onChange = {this.handleOnChange}></input>
+                          <h1>Hello World!! My Name is {this.state.name}</h1>
+                      </div>
+                  )
+              }
+          }
+          export default MyComponent;
+        ```
+  - React life cycle after 16.3
+  ![react-life-cycel](https://github.com/hogyun3709/Blog-Dev/blob/master/blog-dev-docs/react-life-cycle.jpg)
+  - When react components update
+  ![react-update](https://github.com/hogyun3709/Blog-Dev/blob/master/blog-dev-docs/react-update.png)
+  - React life cycle before 16.3
   ![react-ui-lifeCycle](https://github.com/hogyun3709/Blog-Dev/blob/master/blog-dev-docs/react-ui-lifeCycle.jpg)
   - Will hooks replace classes or redux>
     - Hook 이 앞으로 걸어가야 할 리액트의 방향이긴 하나, Dan Abramov 는 기존의 앱을 훅으로 다시 사용 작성하라고는 권하지 않았다.
