@@ -78,7 +78,38 @@
   - Enables to make web application which is client side features to work in differenct environments(browser)
   - 다양한 브라우저에서 동등한 기능을 제공하는 것이 주 목적이다.
   - 물론 디자인 측면이나 css 효과를 살려서 모든 브라우저에서 작동한다면 안성맞춤 이지만, 정작 중요한 웹사이트의 퍼포먼스를 깍아내리지 않는 선에서 조율.
+14. Programming paradigm / 명령형 vs 선언형 
+  -
+15. Currying in detail
+  - 함수형 프로그래밍 기법이며 함수를 재사용하는데 초점이 있다.
+  - 여러가지의 params 를 받는 함수를 하나씩 분리하여 함수를 체이닝 하는 방법
+  - 선언되어진 params 보다 적은 수가 들어온다면 분리해서 받는다 -> ? 지연처리가 가능하다
+    - sum(3,4,5) -> sum(3)(4)(5)
   
+  - 여러가지의 params 를 받는 함수를 하나씩 분리하여 함수를 체이닝 하는 방법ㅅ\
+  - 여러가지의 params 를 받는 함수를 하나씩 분리하여 함수를 체이닝 하는 방
+  ```js
+    function greet(greeting, name){
+      console.log(greeting + ', ' + name);
+    }
+    
+    function greet(greeting){
+      return function(name){
+        console.log(greeting + ', ' + name);
+      }
+    }
+    
+    var hello = greet("hello");
+    hello("hogyun"); // hello, hogyun
+    hello("john"); // hello, john
+    
+    var Hola = greet("Hola");
+    Hola("hogyun"); // Hola, hogyun
+    Hola("john"); // Hola, john
+  ```
+
+16. Strict vs lazy evaluation
+
 ### :green_apple: Node.js
 ***
 1. Express
