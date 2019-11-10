@@ -79,15 +79,21 @@
   - 다양한 브라우저에서 동등한 기능을 제공하는 것이 주 목적이다.
   - 물론 디자인 측면이나 css 효과를 살려서 모든 브라우저에서 작동한다면 안성맞춤 이지만, 정작 중요한 웹사이트의 퍼포먼스를 깍아내리지 않는 선에서 조율.
 14. Programming paradigm / 명령형 vs 선언형 
-  -
+  - 명령형 (imperative, procedural) = 컴퓨터가 수행할 명령들을 나열, 순서대로 기재함 / How
+    - 횡단보도까지 약 50m 이동 (영천로 55번길),
+    - 횡단보도를 이용하여 GS슈퍼마켓 방면으로 횡단,
+    - 횡단보도를 지나 약 120m이동
+  - 선언형 (functional, logical ) = 목표와 수행할 task를 설명함 / What
+    - 출발: 경기도 화성시 xx동 xxx로
+    - 도착: 경기도 화성시 xx동 xxx로
+  - is object oriented programming declarative or imperative?
+    - 객체 지향형 언어인 C++, java 등은 명령형 프로그래밍을 지원하기위해 만들어졌다
 15. Currying in detail
   - 함수형 프로그래밍 기법이며 함수를 재사용하는데 초점이 있다.
   - 여러가지의 params 를 받는 함수를 하나씩 분리하여 함수를 체이닝 하는 방법
   - 선언되어진 params 보다 적은 수가 들어온다면 분리해서 받는다 -> ? 지연처리가 가능하다
     - sum(3,4,5) -> sum(3)(4)(5)
   
-  - 여러가지의 params 를 받는 함수를 하나씩 분리하여 함수를 체이닝 하는 방법ㅅ\
-  - 여러가지의 params 를 받는 함수를 하나씩 분리하여 함수를 체이닝 하는 방
   ```js
     function greet(greeting, name){
       console.log(greeting + ', ' + name);
