@@ -16,6 +16,8 @@
 2. CORS(Cross-origin-resource-sharing)
   - It allows AJAX requests to manage same origin policy
   - To put it simply, we need to use API datas
+  - 보통 메인(client-side) 포트에서 다른 포트(server-side)에서 데이터를 요청의 실행을 위해쓰임
+  - 
 3. Babel
   - Javascript transpiler that converts ES6+ in to plain ES (Let browser understand the code)
   - Transpilates JSX
