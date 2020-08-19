@@ -243,9 +243,32 @@
   ![react-update](https://github.com/hogyun3709/Blog-Dev/blob/master/blog-dev-docs/react-update.png)
   - React life cycle before 16.3
   ![react-ui-lifeCycle](https://github.com/hogyun3709/Blog-Dev/blob/master/blog-dev-docs/react-ui-lifeCycle.jpg)
-  - Will hooks replace classes or redux>
+  - Will hooks replace classes or redux
     - Hook 이 앞으로 걸어가야 할 리액트의 방향이긴 하나, Dan Abramov 는 기존의 앱을 훅으로 다시 사용 작성하라고는 권하지 않았다.
     - State Management 부분에서는 도움을 주는 것이 확실하니, 앞으로의 행보를 기대해봐야겠다.
+    
+  4. React v.17 updates
+    - No new features, but improvements
+    - Resources / Links 
+      1. [React js Blog posts - Reactv17.0 release](https://reactjs.org/blog/2020/08/10/react-v17-rc.html)
+      2. [The 6 major changes in react v17](https://medium.com/better-programming/the-6-major-changes-in-react-v17-0-d14fed5b0529)
+      - React no longer suppoer event handlers at the document level (which means react handles eventss in Root elements)
+      ![Event handlers comparsion v16 - v17](https://github.com/hogyun3709/Blog-Dev/blob/master/blog-dev-docs/event-handler-comparsion.png)
+      - Changes in the following events
+        - onScroll
+        - onFocus, onBlur -> focusin, focusout
+        - onClickCapture
+      - No more Event Pooling (Optimization Failure)
+      ```js
+      function handleChange(e) {
+        setData(data => ({
+          ...data,
+      // This crashes in React 16 and earlier:
+         text: e.target.value
+       }));
+      }
+      ```
+      
 ### :banana: Javascript
 ***
 1. Require vs Import
