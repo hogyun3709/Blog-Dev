@@ -268,6 +268,18 @@
        }));
       }
       ```
+   
+   5. React state Management Library - Recoil
+   - Resource Links below
+      1. [Recoil - Another react state management library?](https://medium.com/swlh/recoil-another-react-state-management-library-97fc979a8d2b)
+      2. [What is React Concurrent Mode?](https://medium.com/swlh/what-is-react-concurrent-mode-46989b5f15da)
+    
+   - Basically, Javascript is a single-threaded Language
+   - React concurrent mode helps to execute almost 'multi-threaded' like mechanism
+   - More detail, it helps to break tasks into pieces and run independetly
+   - NOBA, the library expects a better user experiences
+   - 
+   
       
 ### :banana: Javascript
 ***
