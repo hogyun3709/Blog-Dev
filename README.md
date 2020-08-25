@@ -278,8 +278,15 @@
    - React concurrent mode helps to execute almost 'multi-threaded' like mechanism
    - More detail, it helps to break tasks into pieces and run independetly
    - NOBA, the library expects a better user experiences
-   - 
    
+   6. State management - how to handle remote(fetch) data (api 데이터를 state 으로 관리해야하는 것인가에 대한 고찰) - using react hook only
+   - Resource Link
+      1. [Why you should be storing remote data in a cache - and not in state](https://medium.com/better-programming/why-you-should-be-separating-your-server-cache-from-your-ui-state-1585a9ae8336)
+   - Issuing question: Wht is userData needs to be read from other components at different level of nesting?
+      - Solution??: Context api, Mobx, Redux
+      - :warning: Isn't it introduce an unnecessary layer of complexity? - need to repeat boilerplate
+   - Remote data(Api data call) is read-only. It doesn't belong in the same location as our UI state.
+   - Following two libraries help to manage remote data fetching - [SWR](https://github.com/vercel/swr), [react-query](https://github.com/tannerlinsley/react-query)
       
 ### :banana: Javascript
 ***
