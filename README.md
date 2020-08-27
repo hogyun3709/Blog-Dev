@@ -118,6 +118,11 @@
 
 16. Strict vs lazy evaluation
 
+17. [How to Hide your API keys](https://medium.com/better-programming/how-to-hide-your-api-keys-c2b952bc07e6) - API 키 관리법
+  - 보통 .env(dotenv) 나 config.json, yaml 등을 사용함.
+  - 관리할 data에 유형의 따라, test, production stage 별로 상이함
+  - credential keys, api keys 등등..
+
 ### :green_apple: Node.js
 ***
 1. Express
