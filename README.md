@@ -292,6 +292,11 @@
       - :warning: Isn't it introduce an unnecessary layer of complexity? - need to repeat boilerplate
    - Remote data(Api data call) is read-only. It doesn't belong in the same location as our UI state.
    - Following two libraries help to manage remote data fetching - [SWR](https://github.com/vercel/swr), [react-query](https://github.com/tannerlinsley/react-query)
+   
+   7.[React Hook you may not need](https://medium.com/swlh/a-react-hook-you-dont-need-78ba97b5638e)
+   
+   - JS utility 로 react hook 기능을 may replace
+   - 특히 form components들을 사용할때 주의깊에 지켜봐야함
       
 ### :banana: Javascript
 ***
