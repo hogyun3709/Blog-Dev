@@ -297,6 +297,10 @@
    
    - JS utility 로 react hook 기능을 may replace
    - 특히 form components들을 사용할때 주의깊에 지켜봐야함
+   
+   8. [React Quick Simple interview Q&A](https://medium.com/javascript-in-plain-english/react-v16-technical-interview-questions-1d9b85e6167d)
+   
+   - React의 개괄적인 내용을 집어볼수있을만한 내용을 담은 medium article
       
 ### :banana: Javascript
 ***
