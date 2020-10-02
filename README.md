@@ -667,6 +667,14 @@
     ![containing-box](https://github.com/hogyun3709/Blog-Dev/blob/master/blog-dev-docs/containingBox.png)
 
     
-    
+### :iphone: React Native
+***
+
+1. EXPO Cli Update Issue
+- Version Update 시 종종 npm i -g expo-cli 가 적용이 안되는 경우
+- /usr/local/lib/node_moudules 에서 기존 expo-cli 를 삭제 후 = (rm -rf ~/PATH/expo-cli) 재설치 
+- expo --version 으로 원하는 version 나오면 성공
+- command terminal 에서 나오는 instruction 을 잘 참고하여 keyword 검색하기
+
 ### :horse: MongoDB
 ***
