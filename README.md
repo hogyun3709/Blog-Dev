@@ -675,6 +675,8 @@
 - /usr/local/lib/node_moudules 에서 기존 expo-cli 를 삭제 후 = (rm -rf ~/PATH/expo-cli) 재설치 
 - expo --version 으로 원하는 version 나오면 성공
 - command terminal 에서 나오는 instruction 을 잘 참고하여 keyword 검색하기
-
+- Expo application 동작시 yarn start 사용 X / expo start 로. yarn start 시 expo-cli global 을 묻는 커맨드가 연속적으로 발생.
+- 아래와 같이 EXPO URL 과 QR 코드가 나와야 정상작동(개발) 가능
+![yarn-start-expo-start](https://github.com/hogyun3709/Blog-Dev/blob/master/blog-dev-docs/yarn-start-expo-start.png)
 ### :horse: MongoDB
 ***
