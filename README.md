@@ -680,3 +680,24 @@
 ![yarn-start-expo-start](https://github.com/hogyun3709/Blog-Dev/blob/master/blog-dev-docs/yarn-start-expo-start.png)
 ### :horse: MongoDB
 ***
+
+### :milky_way: GraphQL
+***
+
+1. What is Graph QL?
+- A query langauge that takes the role of extract(?) data from the server (efficiently)
+
+2. GraphQl vs REST API
+- Endpoints (When data fetching happens) - 
+- Performance (Over / Under fetching data)
+- Flexiblity
+
+3. REST API를 보완하여 Graph QL 대처법이 가능한가?
+- GraphQL과 같이 선택적/세부 데이터에 접근하기위한 sub-endpoint 작성 = endpoints의 비대화 / :x:
+- Query params 선택 = API 프로젝트 비대화 / Front - Back 단의 communication resource 비대 / :x:
+- :question: GraphQL 의 유연성에 견줄만한 tool / methodlogy 가 있는가?
+
+***
+Considerable Resources
+- [GraphQL 개념잡기](https://tech.kakao.com/2019/08/01/graphql-basic/) - 카카오 기술블로그 by hoon choi
+***
