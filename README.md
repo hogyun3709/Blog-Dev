@@ -123,6 +123,12 @@
   - 관리할 data에 유형의 따라, test, production stage 별로 상이함
   - credential keys, api keys 등등..
 
+18. Fetch vs Axios
+  - 여러가지 장단점이 있지만 아직 확실하게 어떤 상황에서 둘중 어떤 걸 사용해야할지 모르겠음.
+  - Axios에서 request aborting(cancelToken)의 기능을 지원한다는 차별점이 있었으나, fetch 에도 abortController가 지원된다...
+  - Axios = 구형 브라우저 지원? fetch = polyfill...
+  - CSRF(Cross site request forgery - 크로스 사이트 위조 요청) issue = axios 지원 / fetch로도 할수있는 방법이 있지않을까..
+
 ### :green_apple: Node.js
 ***
 1. Express
