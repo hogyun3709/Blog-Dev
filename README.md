@@ -703,6 +703,42 @@
 - Query params 선택 = API 프로젝트 비대화 / Front - Back 단의 communication resource 비대 / :x:
 - :question: GraphQL 의 유연성에 견줄만한 tool / methodlogy 가 있는가?
 
+4. Understanding Query and Mutation
+- 쿼리 필드는 병렬로 실행/뮤테이션 필드는 하나씩 차례대로 실행
+
+5. Alias(별칭)
+- 객체의 field가 겹쳐, argument로 객체를 query 할때, 에러를 return 함
+```js
+query getUser {
+ users(role: ADMIN) {
+   id
+   fname
+   lname
+ }
+ users(roel: ACCOUNTANT {
+   id
+   fname
+   lname
+ }
+}
+```
+- 하지만,  Alias를 통하여 하나의 요청으로두결과를  얻을수있음
+```js
+query getUser {
+ admins: users(role: ADMIN) {
+   id
+   fname
+   lname
+ }
+ accountants: users(roel: ACCOUNTANT {
+   id
+   fname
+   lname
+ }
+}
+```
+
+
 ***
 Considerable Resources
 - [GraphQL 개념잡기](https://tech.kakao.com/2019/08/01/graphql-basic/) - 카카오 기술블로그 by hoon choi
