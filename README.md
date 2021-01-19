@@ -115,6 +115,36 @@
     Hola("hogyun"); // Hola, hogyun
     Hola("john"); // Hola, john
   ```
+  - 커링이란 (다중 인수)를 갖는 함수를 (단일 함수)를 가지는 함수들의 열로 바꾸는 것을 말함.
+   ```js
+   const sum = (a, b) => a + b;
+   sum(2,3) //3
+   
+   const sum = a => b => a + b ;
+   sum(1)(2) //3
+   
+   const sum = a => b => a + b;
+   ```
+  - 실제 적용 예시
+  
+   ```js
+   function curry(f) {
+     return (a, ..._) => _.length < 1 ? (..._) => f(a, ..._) : f(a, ..._);
+   }
+   $.closest = _.curry((selector, el) => el.closest(selector));
+   $.on = (event, f) => elements => _.each( el => el.addEventListener(event, f),
+    _.isIterable(elements) ? elements : [elements]
+   );
+   $.on('click', e => _.go(
+    e.currentTarget,
+    // el => el.closest('.image'),  // method 중심프로그래밍
+    // el => $.closest('.image', el) // curry 적용전
+    $.closest('.image'), /* closest 를 이용하여 parent tag에 access 함 */
+    $.remove
+   )
+   
+   ```
+
 
 16. Strict vs lazy evaluation
 
