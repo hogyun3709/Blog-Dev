@@ -1,6 +1,28 @@
 # :fire: Blog-Dev
 ***
-### :blue_book: General
+### :apple: HTML
+
+1. ```<meta charset="문자셋">```
+  - HTML 문서에서 text 를 인코딩(binary mapping)하는 방식을 설정
+  - 보통 문자셋으로 UTF-8를 기용함
+  - UTF-8?
+     - variable width char encoding (가변길이 문자 인코딩 방식)
+     - 글자마다 (변환하려는 char 마다) byte 길이가 다를수있음 ex: 'a' = 1byte, '가' = 3 byte
+
+***
+***
+### :book: CS in General
+
+1. What is bit?
+  - BInary digiT / 데이터를 나타내는 최소 단위 / 0, 1
+
+2. What is Byte?
+  - 256 units(data) can be stored
+
+3. Unicode(USC-2)?
+  - 17planes(1 BMP, 16 SMP) * 2byte(2의16승 / 65536) - 2048(256개의 codepage 에서 11개는 invalid? - 이유찾아보기) = 1,112,064 units can be stored
+***
+### :blue_book: Web Tech General
 ***
 1. parameter vs argument
   - Parameter: variable listed as a part of the function definition
